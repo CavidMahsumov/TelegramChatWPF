@@ -1,0 +1,77 @@
+﻿<Window x:Class="AzeriChat.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AzeriChat"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="2" Background="DeepSkyBlue">
+            <WrapPanel>
+                <TextBox Background="White"
+                     Height="50"
+                     Width="300"
+                     Margin="0,0,20,0"
+                    Text="Write "
+                         
+                     >
+
+                </TextBox>
+                <Border CornerRadius="50" BorderBrush="Yellow" Background="DeepSkyBlue" >
+                    <Button x:Name="SendBtn"
+                        Background="Transparent"
+                        Width="70"
+                        Height="50"
+                            Content="Send"
+                            FontSize="20"
+                            FontFamily="Comic Sans Ms"
+                        >
+
+                    </Button>
+                </Border>
+                
+            </WrapPanel>
+            
+            
+        </Grid>
+        <Grid Grid.Row="1"
+              >
+            
+            <StackPanel Background="DeepSkyBlue"
+                        
+                        >
+                <Image Source="Image/WpBackGround.png"></Image>
+                <ListBox
+                    Width="350"
+                    Height="310"
+                    Opacity="0.5"
+                    >
+                    <TextBlock Background="Red">
+                        Salam
+                    </TextBlock>
+                </ListBox>
+                
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="0" Background="DeepSkyBlue">
+            <WrapPanel>
+                <Image Source="Image/Chat2.png"></Image>
+                <TextBlock
+                    Text="Ne Var Ne Yox ?"
+                    FontSize="20"
+                    FontFamily="Comic Sans MS"
+                    Margin="20"
+                    
+                    >
+                </TextBlock>
+            </WrapPanel> 
+            
+        </Grid>
+    </Grid>
+</Window>
