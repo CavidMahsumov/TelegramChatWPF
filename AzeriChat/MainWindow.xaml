@@ -6,6 +6,10 @@
         xmlns:local="clr-namespace:AzeriChat"
         mc:Ignorable="d"
         Title="MainWindow" Height="700" Width="410"
+        MaxHeight="700"
+        MinHeight="700"
+        MaxWidth="410"
+        MinWidth="410"
         Background="Transparent"
         >
     
