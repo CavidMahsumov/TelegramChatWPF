@@ -5,73 +5,151 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AzeriChat"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="400">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="4*"/>
-            <RowDefinition />
-        </Grid.RowDefinitions>
-        <Grid Grid.Row="2" Background="DeepSkyBlue">
-            <WrapPanel>
-                <TextBox Background="White"
+        Title="MainWindow" Height="700" Width="410"
+        Background="Transparent"
+        >
+    
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="7*"/>
+                <RowDefinition  />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="2" Background="#404347">
+                <TextBox Background="#404347" BorderThickness="0"
+                         Name="MessageTxtBox"
                      Height="50"
-                     Width="300"
-                     Margin="0,0,20,0"
-                    Text="Write "
+                     Width="410"
+                     Margin="0,0,5,0"
+                    Text="Write Message "
+                    FontFamily="Comic Sans MS"      
                          
                      >
 
-                </TextBox>
-                <Border CornerRadius="50" BorderBrush="Yellow" Background="DeepSkyBlue" >
-                    <Button x:Name="SendBtn"
-                        Background="Transparent"
-                        Width="70"
-                        Height="50"
-                            Content="Send"
-                            FontSize="20"
-                            FontFamily="Comic Sans Ms"
-                        >
 
-                    </Button>
+                </TextBox>
+                <Border>
+
                 </Border>
+                <Button x:Name="SendBtn"
+                        Background="Transparent"
+                        Width="50"
+                        Height="40"
+                          Margin="290,15,15,15"
+                            FontSize="20"
+                            FontFamily="Comic Sans Ms" Click="SendBtn_Click"
+                        >
+                    <Image
+                    Cursor="Hand"
+                    Source="Image/SendPhoto.png"
+                    >
+
+                    </Image>
+
+                </Button>
+            <Button
+               x:Name="PinBtn"
+                Background="Transparent"
+                Width="50"
+                Height="40"
+                Margin="200,15,15,15"
+                Click="PinBtn_Click"
+                >
+                <Image
+                    Source="Image/Pin.png"
+                    >
+                    
+                </Image>
                 
-            </WrapPanel>
-            
-            
-        </Grid>
-        <Grid Grid.Row="1"
+            </Button>
+
+
+
+
+
+            </Grid>
+            <Border>
+                
+            </Border>
+            <Grid Grid.Row="1" 
               >
-            
-            <StackPanel Background="DeepSkyBlue"
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Image Grid.Column="0"
+                Source="Image/WpBackGround.png"
+                Width="400"
+                Height="700"
+                >
+
+                    </Image>
+                    <StackPanel Background="Transparent"
                         
                         >
-                <Image Source="Image/WpBackGround.png"></Image>
-                <ListBox
-                    Width="350"
-                    Height="310"
-                    Opacity="0.5"
+                        <ListBox
+                   x:Name="ListBox1"
+                             Background="Transparent"
+                            Foreground="White"
+                            BorderThickness="0"
                     >
-                    <TextBlock Background="Red">
-                        Salam
-                    </TextBlock>
-                </ListBox>
-                
-            </StackPanel>
-        </Grid>
-        <Grid Grid.Row="0" Background="DeepSkyBlue">
-            <WrapPanel>
-                <Image Source="Image/Chat2.png"></Image>
-                <TextBlock
-                    Text="Ne Var Ne Yox ?"
+
+                        </ListBox>
+
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <Image Grid.Column="1"
+                Source="Image/WpBackGround.png"
+                Width="400"
+                Height="700"
+                >
+
+                    </Image>
+                    <StackPanel Background="Transparent"
+                        
+                        >
+                        <ListBox
+                   x:Name="ListBox"
+                            Background="Transparent"
+                            Foreground="White"
+                            BorderThickness="0"
+                            
+                    >
+
+                        </ListBox>
+
+                    </StackPanel>
+
+                </Grid>
+
+            </Grid>
+           
+            
+            </Grid>
+            
+            
+                <Grid Grid.Row="0" Background="#404347">
+                    <WrapPanel>
+                        <Image Source="Image/Telegram.png"></Image>
+                        <TextBlock
+                    Text="Telegram"
                     FontSize="20"
-                    FontFamily="Comic Sans MS"
+                    
                     Margin="20"
                     
                     >
-                </TextBlock>
-            </WrapPanel> 
+                        </TextBlock>
+                    </WrapPanel>
+
+                </Grid>
+           
             
         </Grid>
-    </Grid>
+
+
+ 
+
 </Window>
