@@ -60,6 +60,7 @@ namespace AzeriChat
             }
             else if (MessageTxtBox.Text == "hardasan")
             {
+
                 ListBox.HorizontalAlignment = HorizontalAlignment.Right;
                 ListBox.Items.Add(spac);
                 ListBox.Items.Add(IService.GetResponseForHardasan());
